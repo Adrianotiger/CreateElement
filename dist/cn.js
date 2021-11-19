@@ -1,9 +1,10 @@
 /**
-  * CreateNode helper function
-  * @title CreateElement macro
+  * 
+  * Title: CreateElement macro
+  * Description: Create a DOM node and add attributes and childs. Appending it to the parent with one call. Simple and flexible.
+  * @file: cn.js
  ​ * ​@author​ Adriano Petrucci
  ​ * ​@see​ <a href="https://github.com/Adrianotiger/CreateElement/" target="_blank">https://github.com/Adrianotiger/CreateElement/</a> 
- ​ * ​@description Create a DOM node and add attributes and childs. Appending it to the parent with one call. Simple and flexible.
 */
 
 /**
