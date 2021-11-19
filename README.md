@@ -78,12 +78,25 @@ And the elements will be added with:
 Is the parent node of this new object.
 If not set or if null, this new node will not be added.
 
-## return
+## Return
 The function returns an HTML element, or better, a node with attributes and child nodes.
 
 # Install
 If you just want use it, the simplest way is to copy the content of the js file as it is just a function.
 You can also copy the line of the minified script and insert it to your html or project (at beginning, before you call any script):
 ```
-
+function _CN(e,r,t,n){var i=document.createElement(e);if(r&&null!=r)for(var a in r)i.setAttribute(a,r[a]);if(t&&Array.isArray(t))for(var o in t)i.appendChild("string"==typeof t[o]||"number"==typeof t[o]?document.createTextNode(t[o]):t[o]);return n&&void 0!==n&&n.appendChild(i),i}
+```
+Or integrate it as normal script, inside your html:
+```
+<html>
+  <head>
+ ...
+  <script src="cn.js"></script>
+ ...
+  </head>
+  <body>
+ ...
+  </body>
+</html>
 ```
