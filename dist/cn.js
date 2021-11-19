@@ -1,5 +1,11 @@
-// CreateNode helper function
-// tag: tagname "div". Attributes: json format {name:"aaa"}. childs: array of childs, node or text. basenode: node.
+/**
+  * CreateNode helper function
+  * @title CreateElement macro
+ ​ * ​@author​ Adriano Petrucci
+ ​ * ​@see​ <a href="https://github.com/Adrianotiger/CreateElement/" target="_blank">https://github.com/Adrianotiger/CreateElement/</a> 
+ ​ * ​@description Create a DOM node and add attributes and childs. Appending it to the parent with one call. Simple and flexible.
+*/
+
 /**
  * Create a DOM node and add attributes, childs and append to parent with one call.
  * @param  {String}  tag  HTML5 tag, like "br" or "b" or "input". document.createElement({tag}) is called.
