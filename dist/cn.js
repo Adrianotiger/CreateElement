@@ -15,20 +15,21 @@
  * @param  {Element} baseNode  ParentNode, where you want add the new node or null or undefined.
  * @return {Element}       Return the new node created
  */
-function _CN(tag, attr, childs, baseNode)
+function _CN(tag, attr, childs, baseNode=null)
 {
   var el = document.createElement(tag);
-  if(attr && attr !== null && typeof attr !== 'undefined')
+  if(typeof attr === 'object')
   {
     for(var a in attr)
       el.setAttribute(a, attr[a]);
   }
-  if(childs && Array.isArray(childs))
+  if(Array.isArray(childs))
   {
-    for(var c in childs)
-      el.appendChild((typeof childs[c] === "string" || typeof childs[c] === "number") ? document.createTextNode(childs[c]) : childs[c]);
+    childs.forEach(child => {
+      el.appendChild((typeof child === "string" || typeof child === "number") ? document.createTextNode(child) : child);
+    });
   }
-  if(baseNode && typeof baseNode !== 'undefined')
+  if(baseNode !== null)
   {
     baseNode.appendChild(el);
   }
